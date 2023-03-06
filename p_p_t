@@ -1,0 +1,48 @@
+import random
+
+inicio=int(input('Introduce 1 para iniciar la partida: '))
+
+while inicio ==1:
+  entrada = str(input('Piedra, Papel o Tijera?: '))
+
+  juego = ['piedra', 'papel', 'tijera']
+
+  resultado = random.choice(juego)
+  print('Tu contrincante ha sacado: ', resultado)
+
+#Resultados para piedra
+
+  if entrada == 'piedra' and resultado == 'piedra':
+     print('Has empatado')
+  elif entrada == 'piedra' and resultado == 'tijera':
+     print('Has ganado :)')
+  elif entrada == 'piedra' and resultado == 'papel':
+     print('Has perdido :(')
+
+#Resultados para papel 
+
+  if entrada == 'papel' and resultado == 'piedra':
+     print('Has ganado :)')
+  elif entrada == 'papel' and resultado == 'tijera':
+     print('Has perdido :(')
+  elif entrada == 'papel' and resultado == 'papel':
+     print('Has empatado')
+  
+#Resultados para tijera
+
+
+  if entrada == 'tijera' and resultado == 'piedra':
+     print('Has perdido :(')
+  elif entrada == 'tijera' and resultado == 'tijera':
+     print('Has empatado')
+  elif entrada == 'tijera' and resultado == 'papel':
+     print('Has ganado :)')
+
+#Fin del bucle
+
+  fin=str(input('Quieres volver a jugar?'))
+  if fin=='Si':
+    continue
+  elif fin=='No':
+    print('Hasta Pronto')
+    break
